@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.library.view.bookSearchController">
+   <children>
+      <SplitPane dividerPositions="0.2525083612040134" layoutX="163.0" layoutY="69.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.44377510040160645" layoutX="366.0" layoutY="84.0" prefHeight="296.0" prefWidth="998.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutX="53.0" layoutY="93.0" text="Search" />
+                              <TextField fx:id="bookSearchTextField" layoutX="122.0" layoutY="89.0" />
+                              <Button layoutX="314.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" />
+                              <Label layoutX="154.0" layoutY="14.0" text="Book Search" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TextField fx:id="checkoutISBNField" layoutX="56.0" layoutY="61.0" />
+                              <TextField fx:id="checkoutCardIdField" layoutX="226.0" layoutY="61.0" />
+                              <Button layoutX="186.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleCheckoutBook" text="Proceed Checkout" />
+                              <Label layoutX="103.0" layoutY="36.0" text="ISBN" />
+                              <Label layoutX="287.0" layoutY="36.0" text="Card Id" />
+                              <Label layoutX="191.0" layoutY="14.0" text="Checkout" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.4578313253012048" layoutX="209.0" layoutY="34.0" prefHeight="296.0" prefWidth="998.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="bookSearchtable" prefHeight="442.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="ISBNColumn" prefWidth="75.0" text="ISBN" />
+                                  <TableColumn fx:id="BookNameColumn" prefWidth="205.0" text="Book Name" />
+                                    <TableColumn fx:id="AuthorNameColumn" prefWidth="87.0" text="Author name" />
+                                    <TableColumn fx:id="AvailableColumn" prefWidth="85.0" text="Available" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="checkedOutBooksTable" layoutX="169.0" layoutY="94.0" prefHeight="442.0" prefWidth="696.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="checkedOutCardIdColumn" prefWidth="75.0" text="Card ID" />
+                                  <TableColumn fx:id="checkedOutISBNColumn" prefWidth="75.0" text="ISBN" />
+                                    <TableColumn fx:id="checkedOutBookNameColumn" prefWidth="75.0" text="Book Name" />
+                                    <TableColumn fx:id="checkedOutDateOutColumn" prefWidth="75.0" text="Date Out" />
+                                    <TableColumn fx:id="checkedOutDueDateColumn" prefWidth="75.0" text="Due Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.library.view.payAsOneController">
+   <children>
+      <SplitPane dividerPositions="0.22240802675585283" layoutX="202.0" layoutY="53.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="324.0" layoutY="14.0" text="Search Text" />
+                  <TextField fx:id="searchTextField" layoutX="282.0" layoutY="41.0" />
+                  <Button layoutX="417.0" layoutY="78.0" mnemonicParsing="false" onAction="#handelSearchButton" text="OK" />
+                  <Button layoutX="24.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="50.0" prefWidth="71.0" text="Refresh" />
+                  <ComboBox fx:id="paidUnpaidSelectionBox" layoutX="469.0" layoutY="41.0" prefWidth="150.0" />
+                  <Label layoutX="499.0" layoutY="14.0" text="Make Selection" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.6827309236947792" layoutX="14.0" layoutY="-14.0" prefHeight="296.0" prefWidth="998.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="-14.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="paymentsTable" layoutY="14.0" prefHeight="460.0" prefWidth="677.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                                <columns>
+                                  <TableColumn fx:id="paymentsCardIdColumn" prefWidth="75.0" text="Card Id" />
+                                  <TableColumn fx:id="paymentsBNameColumn" prefWidth="75.0" text="Borrower Name" />
+                                    <TableColumn fx:id="paymentsISBNColumn" prefWidth="75.0" text="ISBN" />
+                                    <TableColumn fx:id="paymentsNameColumn" prefWidth="75.0" text="Book Name" />
+                                    <TableColumn fx:id="paymentsDateOutColumn" prefWidth="75.0" text="Date Out" />
+                                    <TableColumn fx:id="paymentsDueDateColumn" prefWidth="75.0" text="Due Date" />
+                                    <TableColumn fx:id="paymentsfineAmountColumn" prefWidth="75.0" text="Fine Amount" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <GridPane layoutY="14.0" prefHeight="417.0" prefWidth="291.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="14.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="252.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="291.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Card Id">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Borrower name" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="ISBN" GridPane.rowIndex="2">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Book Name" GridPane.rowIndex="3">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Date Out" GridPane.rowIndex="4">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Due Date" GridPane.rowIndex="5">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Fine Amount" GridPane.rowIndex="6">
+                                       <padding>
+                                          <Insets left="45.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="paymentsIdField" GridPane.columnIndex="1" />
+                                    <TextField fx:id="paymentsBorrowerNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="paymentsIsbnField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="paymentsBookNameField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="paymentsDateOutField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="paymentsDueDateField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="paymentsFineAmountField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                              <Button layoutX="104.0" layoutY="419.0" mnemonicParsing="false" onAction="#handlePayFineButton" text="Pay Fine" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

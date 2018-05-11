@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.library.view.tabbedViewController">
+   <children>
+      <TabPane layoutX="184.0" layoutY="110.0" prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Book Search &amp; Checkout">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="260.0" layoutY="164.0" mnemonicParsing="false" text="Button" />
+                        <fx:include source="bookSearchView.fxml" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Borrower Details">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="168.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleNewBorrower" prefHeight="145.0" prefWidth="188.0" text="Add a borrower" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            <Tab text="Return Book">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="226.0" layoutY="69.0" mnemonicParsing="false" text="Button" />
+                        <fx:include source="returnBookView.fxml" />
+                        <Label layoutX="845.0" layoutY="182.0" text="Return Here" />
+                        <Label layoutX="348.0" layoutY="22.0" text="Search Area" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pay One Book At A Time">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="226.0" layoutY="69.0" mnemonicParsing="false" text="Button" />
+                        <fx:include source="payAsOneView.fxml" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pay Total Fine">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="226.0" layoutY="69.0" mnemonicParsing="false" text="Button" />
+                        <fx:include source="payAsTotalView.fxml" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

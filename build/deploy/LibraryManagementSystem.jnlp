@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LibraryManagementSystem.jnlp">
+  <information>
+    <title>LibraryManagementSystem</title>
+    <vendor>Preeti</vendor>
+    <description>UTDManager</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="LibraryManagementSystem.jar" size="37056" download="eager" />
+    <jar href="libs\mysql-connector-java-5.1.44-bin.jar" size="999635" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="ch.makery.library.code.MainApp"  name="UTDManager" />
+  <update check="background"/>
+</jnlp>

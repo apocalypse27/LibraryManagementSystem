@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.library.view.payAsTotalController">
+   <children>
+      <SplitPane dividerPositions="0.2491638795986622" layoutX="455.0" layoutY="275.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="284.0" layoutY="56.0" text="Borrower ID" />
+                  <TextField fx:id="borwrSearchField" layoutX="388.0" layoutY="52.0" />
+                  <Button layoutX="577.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleBorSearchButton" text="Search" />
+                  <Label layoutX="354.0" layoutY="14.0" text="Search for Borrower" />
+                  <Button layoutX="89.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="44.0" prefWidth="64.0" text="Refresh" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.3674698795180723" layoutX="309.0" layoutY="115.0" prefHeight="446.0" prefWidth="998.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="displayFineAmtTable" layoutX="80.0" layoutY="55.0" prefHeight="444.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="borIdColumn" prefWidth="75.0" text="Borrower Id" />
+                                  <TableColumn fx:id="borNameColumn" prefWidth="145.0" text="Borrower Name" />
+                                    <TableColumn fx:id="totFineAmtColumn" prefWidth="142.0" text="Total Fine Amount" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutX="97.0" layoutY="163.0" text="Total Fine Amount" />
+                              <TextField fx:id="totFineAmtField" layoutX="240.0" layoutY="159.0" />
+                              <Button layoutX="182.0" layoutY="210.0" mnemonicParsing="false" onAction="#handlePayFineButton" text="Pay Fine Now !" />
+                              <Label layoutX="211.0" layoutY="35.0" text="Pay here" />
+                              <Label layoutX="109.0" layoutY="121.0" text="Borrower ID" />
+                              <TextField fx:id="selectedBorIdField" layoutX="240.0" layoutY="109.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
