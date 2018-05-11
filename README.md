@@ -1,5 +1,5 @@
 # LibraryManagementSystem1
-#Java Code and JavaFX 
+## Java Code and JavaFX 
 I chose JavaFX for the design of UI and used scenebuilder to design the layouts for each page.
 The Java Project is divided into following sections.
 1.	Java Code(ch.makery.library.code)- This contains the main Class of the JAVAFX project. The application gets launched from here and the different fxml files that are required are loaded from here.
