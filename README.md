@@ -1,4 +1,4 @@
-# LibraryManagementSystem1
+# LibraryManagementSystem
 ## Java Code and JavaFX 
 I chose JavaFX for the design of UI and used scenebuilder to design the layouts for each page.
 The Java Project is divided into following sections.
